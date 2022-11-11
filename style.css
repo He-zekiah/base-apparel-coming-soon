@@ -1,0 +1,108 @@
+@import url(https://fonts.google.com/specimen/Josefin+Sans);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 52rem;
+    height: 500px;
+    background-image: url(./images/bg-pattern-desktop.svg);
+}
+
+.logo {
+    width: 100px;
+}
+
+.con1 {
+    width: 44%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px 0 30px 90px;
+}
+
+.mess {
+    font-size: 40px;
+    letter-spacing: 8px;
+    margin-top: 80px;
+    color: hsl(0, 36%, 70%);
+}
+
+.change {
+    color: black;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 11px;
+    color: hsl(0, 36%, 70%);
+    margin-top: 15px;
+    line-height: 15px;
+}
+
+.form {
+    width: 240px;
+    margin-top: 20px;
+    height: 30px;
+}
+
+.detail {
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    border-radius: 40px;
+    border: 1px solid hsl(0, 36%, 70%);
+    position: relative;
+}
+
+.detail::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.arrow {
+    background-color: hsl(0, 93%, 68%);
+    width: 60px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    position: absolute;
+    bottom: 220px;
+    left: 730px;
+}
+
+.error {
+    visibility: hidden;
+    position: absolute;
+    bottom: 230px;
+    left: 705px;
+    width: 18px;
+}
+
+.con2 {
+    height: 100%;
+    width: 45%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
