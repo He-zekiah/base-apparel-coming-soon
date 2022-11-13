@@ -9,19 +9,20 @@
 .container {
     height: 100vh;
     width: 100vw;
-    background-color: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .content {
+    background-color: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 52rem;
+    width: 55rem;
     height: 500px;
     background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -51,16 +52,32 @@
 }
 
 .text {
-    font-size: 11px;
+    font-size: 12px;
     color: hsl(0, 36%, 70%);
     margin-top: 15px;
     line-height: 15px;
 }
 
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .form {
-    width: 240px;
+    position: relative;
+    width: 260px;
     margin-top: 20px;
     height: 30px;
+}
+
+small {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 12px;
+    color: hsl(0, 100%, 74%);
+    margin-top: 10px;
 }
 
 .detail {
@@ -68,16 +85,28 @@
     height: 35px;
     padding-left: 15px;
     border-radius: 40px;
-    border: 1px solid hsl(0, 36%, 70%);
+    border: 1px solid hsl(0, 83%, 86%);
     position: relative;
 }
 
+.success {
+    border: 1px solid hsl(0, 80%, 82%);
+}
+
+.error {
+    border: 3px solid hsl(0, 100%, 74%);
+}
+
+.detail:focus {
+    outline: 1px solid hsl(0, 83%, 86%);
+}
+
 .detail::placeholder {
-    color: hsl(0, 36%, 70%);
+    color: hsl(0, 71%, 88%);
 }
 
 .arrow {
-    background-color: hsl(0, 93%, 68%);
+    background-color: hsl(0, 83%, 86%);
     width: 60px;
     height: 35px;
     display: flex;
@@ -85,12 +114,19 @@
     align-items: center;
     border-radius: 60px;
     position: absolute;
-    bottom: 220px;
-    left: 730px;
+    bottom: -5px;
+    left: 230px;
+    cursor: pointer;
+    border: 1px solid hsl(0, 83%, 86%);
 }
 
-.error {
-    visibility: hidden;
+.arrow:hover {
+    background-color: hsl(0, 80%, 82%);
+    border: 1px solid hsl(0, 80%, 82%);
+}
+
+.errors {
+    display: none;
     position: absolute;
     bottom: 230px;
     left: 705px;
@@ -105,4 +141,90 @@
 .img {
     width: 100%;
     height: 100%;
+}
+
+.img2 {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content {
+        overflow: auto;
+        width: 400px;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .logo {
+        width: 130px;
+        position: absolute;
+        top: -320px;
+        right: 230px;
+    }
+
+    .con1 {
+        width: 400px;
+        padding: 30px;
+    }
+
+    .mess {
+        text-align: center;
+        width: 100%;
+        font-size: 55px;
+    }
+
+    .text {
+        text-align: center;
+        width: 100%;
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .box {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .detail {
+        height: 60px;
+    }
+
+    .detail::placeholder {
+        font-size: 20px;
+    }
+
+    small {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .arrow {
+        height: 60px;
+        width: 80px;
+        left: 250px;
+        bottom: -30px;
+    }
+
+    .con2 {
+        width: 100%;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .img2 {
+        display: block;
+        width: 100%;
+    }
 }
