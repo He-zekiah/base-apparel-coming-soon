@@ -65,12 +65,25 @@
     align-items: flex-start;
 }
 
+.errors {
+    position: absolute;
+    left: 200px;
+    bottom: 3px;
+    width: 15px;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 .form {
     position: relative;
     width: 260px;
     margin-top: 20px;
     height: 30px;
 }
+
 
 small {
     text-align: left;
@@ -82,7 +95,7 @@ small {
 
 .detail {
     width: 100%;
-    height: 35px;
+    height: 40px;
     padding-left: 15px;
     border-radius: 40px;
     border: 1px solid hsl(0, 83%, 86%);
@@ -108,13 +121,13 @@ small {
 .arrow {
     background-color: hsl(0, 83%, 86%);
     width: 60px;
-    height: 35px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 60px;
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     left: 230px;
     cursor: pointer;
     border: 1px solid hsl(0, 83%, 86%);
@@ -123,14 +136,6 @@ small {
 .arrow:hover {
     background-color: hsl(0, 80%, 82%);
     border: 1px solid hsl(0, 80%, 82%);
-}
-
-.errors {
-    display: none;
-    position: absolute;
-    bottom: 230px;
-    left: 705px;
-    width: 18px;
 }
 
 .con2 {

@@ -1,7 +1,10 @@
 const userEmail = document.getElementById("email");
+const form = document.getElementById('form');
+const error2 = document.querySelector('.errors');
 const submit = document.getElementById("submit");
+// console.log(error2);
 
-userEmail.addEventListener("change", function(e) {
+userEmail.addEventListener("change", function (e) {
     e.target.value;
 });
 
@@ -17,15 +20,14 @@ const isEmailValid = (email) => {
 // show error message or invalid field input
 const showError = (input, message, text) => {
 
-    const formParent = input.parentElement;
     const formInput = input;
 
     formInput.classList.remove('success');
     formInput.classList.add('error');
+    error2.classList.add('visible');
 
     text.textContent = message;
 };
-// console.log('input');
 
 // remove error message
 const showSuccess = (input, text) => {
@@ -35,13 +37,14 @@ const showSuccess = (input, text) => {
 
     formInput.classList.remove('error');
     formInput.classList.add('success');
+    error2.classList.remove('visible');
 
     text.textContent = " ";
 };
 
 const checkEmail = () => {
     let valid = false;
-    
+
     let emailError = document.getElementById('small');
     const mail = userEmail.value.trim();
     if (!isRequired(mail)) {
@@ -52,7 +55,7 @@ const checkEmail = () => {
         showSuccess(userEmail, emailError);
         valid = true;
     }
-    
+
     return valid;
 };
 // console.log(checkEmail);
@@ -84,5 +87,4 @@ submit.addEventListener("click", function (e) {
 
     // validate field
     let isEmailValid = checkEmail();
-});
-// console.log("click");
+});    
